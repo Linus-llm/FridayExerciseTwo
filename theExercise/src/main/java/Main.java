@@ -18,9 +18,9 @@ public class Main {
         myTaskList.addTasksToList(myTask4);
         myTaskList.addTasksToList(myGardenTask);
 
-        List<Task> result = myTaskList.filterTasksOnKeyword("Fix");
-        for(Task s: result){
-            System.out.println(s.toString());
-        }
+
+        myTaskList.printListOfTasks(myTaskList.filterTasksOnKeyword("Fix"));
+        System.out.println("\n");
+        myTaskList.printListOfTasks(myTaskList.sortTasksByDueDate());
     }
 }

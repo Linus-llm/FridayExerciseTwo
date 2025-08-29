@@ -20,7 +20,7 @@ public class TaskList<T extends Task> {
         return resultList;
     }
     public List<?> sortTasksByDueDate(){
-       List<T> resultList = listOfTasks.stream().sorted(Comparator.comparingLong(i-> i.getLocalDate().getDayOfMonth() + i.getLocalDate().getMonthValue())).toList();
+       List<T> resultList = listOfTasks.stream().sorted(Comparator.comparing(x->x.getLocalDate())).toList();
         return resultList;
     }
 
