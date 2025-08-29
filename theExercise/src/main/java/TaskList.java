@@ -26,6 +26,9 @@ public class TaskList<T extends Task> {
 
     public List<?> getTaskDueToday(){
         List<T> resultList = listOfTasks.stream().filter(x -> x.getLocalDate().isEqual(LocalDate.now())).toList();
+        if (resultList.isEmpty()){
+            System.out.println("List is empty");
+        }
         return resultList;
     }
     public List<T> getOverDueTasks(){

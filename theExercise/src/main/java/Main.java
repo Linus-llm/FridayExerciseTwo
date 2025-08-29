@@ -22,5 +22,10 @@ public class Main {
         myTaskList.printListOfTasks(myTaskList.filterTasksOnKeyword("Fix"));
         System.out.println("\n");
         myTaskList.printListOfTasks(myTaskList.sortTasksByDueDate());
+        System.out.println("\n");
+        myTaskList.printListOfTasks(myTaskList.getOverDueTasks());
+        System.out.println("\n");
+        myTaskList.printListOfTasks(myTaskList.getTaskDueToday());
+
     }
 }
